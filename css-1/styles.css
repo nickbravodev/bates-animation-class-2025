@@ -1,0 +1,66 @@
+main {
+  margin-inline: 5%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.bg-body-tertiary {
+  background-color: #f2f2f2 !important;
+}
+
+.banner {
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-block: 4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  .banner__text-block {
+    padding: 2rem;
+    order: 1;
+  }
+
+  .banner__img {
+    order: 2;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.reverse {
+    .banner__text-block {
+      order: 2;
+    }
+
+    .banner__img {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin-block: 2rem;
+
+    .banner__text-block {
+      order: 2;
+    }
+
+    .banner__img {
+      order: 1;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+}
